@@ -4,7 +4,7 @@ import sys
 sys.path.append("../")
 from utils import measure_distance, get_foot_position
 
-
+# DISTANCE Only
 class SpeedAndDistance_Estimator:
     def __init__(self):
         self.frame_window = 5
@@ -76,15 +76,18 @@ class SpeedAndDistance_Estimator:
                         position[1] += 40
 
                         position = tuple(map(int, position))
-                        cv2.putText(
-                            frame,
-                            f"{speed:.2f} km/h",
-                            position,
-                            cv2.FONT_HERSHEY_SIMPLEX,
-                            0.5,
-                            (0, 0, 0),
-                            2,
-                        )
+                        # not confirmed yet
+
+                        
+                        # cv2.putText(
+                        #     frame,
+                        #     f"{speed:.2f} km/h",
+                        #     position,
+                        #     cv2.FONT_HERSHEY_SIMPLEX,
+                        #     0.5,
+                        #     (0, 0, 0),
+                        #     2,
+                        # )
                         cv2.putText(
                             frame,
                             f"{distance:.2f} m",
